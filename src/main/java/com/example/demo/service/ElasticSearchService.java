@@ -32,5 +32,3 @@ public void LogEvent (String message) {
     }
 }
 }
-
-
