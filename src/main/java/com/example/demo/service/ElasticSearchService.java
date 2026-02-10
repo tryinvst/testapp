@@ -20,6 +20,7 @@ public ElasticSearchService(RestClient.Builder restclient,@Value ( "${app.elasti
     this.indexname = indexname;
 }
 
+//запуск приложения + логирования
 public void LogEvent (String message) {
     LogEvent event = LogEvent.event ( message );
     try {
