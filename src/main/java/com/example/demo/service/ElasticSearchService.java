@@ -5,9 +5,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 
-@Repository
+@Service
 public class ElasticSearchService {
 private static final Logger logger = LoggerFactory.getLogger (ElasticSearchService.class);
 private final RestClient client;
@@ -31,3 +32,5 @@ public void LogEvent (String message) {
     }
 }
 }
+
+
