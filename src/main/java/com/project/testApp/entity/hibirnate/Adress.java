@@ -1,12 +1,15 @@
 package com.project.testApp.entity.hibirnate;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
-public class Addres {
+@Table (name = "adresess")
+public class Adress {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     long id;
@@ -16,7 +19,7 @@ public class Addres {
     String homenumber;
     String appartment;
 
-    public Addres(long id ,String region ,String city ,String street ,String homenumber ,String appartment) {
+    public Adress(long id ,String region ,String city ,String street ,String homenumber ,String appartment) {
         this.id = id;
         this.region = region;
         this.city = city;
@@ -73,6 +76,6 @@ public class Addres {
         this.appartment = appartment;
     }
 
-    public Addres() {
+    public Adress() {
     }
 }

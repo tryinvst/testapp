@@ -12,12 +12,13 @@ import jakarta.validation.constraints.Size;
 //создание таблицы Users
 @Entity(name = "users")
 public class Users {
+
     @NotNull
     String username;
     @NotNull
     Integer age;
     @NotNull
-    @Size (min = 8, message = "Пароль должен содержать не менее 8 символов")
+    @Size(min = 8, message = "Пароль должен содержать не менее 8 символов")
     String password;
     @NotNull
     String firstname;
@@ -32,13 +33,8 @@ public class Users {
     @GeneratedValue(strategy = GenerationType.AUTO)
     long id;
 
-    private String region;
-    private String city;
-    private String street;
-    private String homenumber;
-    private String appartment;
-
-    public Users(String username ,Integer age ,String password ,String firstname ,String lastname ,String phonenumber ,String email ,
+    public Users(String username ,Integer age ,String password ,String firstname ,
+                 String lastname ,String phonenumber ,String email ,
                  long id) {
         this.username = username;
         this.age = age;
@@ -119,46 +115,6 @@ public class Users {
 
     public void setPhonenumber(String phonenumber) {
         this.phonenumber = phonenumber;
-    }
-
-    public String getRegion() {
-        return region;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public String getStreet() {
-        return street;
-    }
-
-    public String getHomenumber() {
-        return homenumber;
-    }
-
-    public String getAppartment() {
-        return appartment;
-    }
-
-    public void setRegion(String region) {
-        this.region = region;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public void setStreet(String street) {
-        this.street = street;
-    }
-
-    public void setHomenumber(String homenumber) {
-        this.homenumber = homenumber;
-    }
-
-    public void setAppartment(String appartment) {
-        this.appartment = appartment;
     }
 }
 
