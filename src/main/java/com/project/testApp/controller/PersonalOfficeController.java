@@ -29,8 +29,8 @@ public class PersonalOfficeController {
     @PostMapping
     public ResponseEntity<PersonalOffice> uploadUsers(@Valid @RequestBody PersonalOffice personalOffice) {
         // Сохраняем PersonalOffice через соответствующий репозиторий
-        PersonalOffice savedOffice = personalService.savePerson(personalOffice);
-        return ResponseEntity.status(HttpStatus.CREATED).body(savedOffice);
+       personalService.savePerson(personalOffice);
+        return ResponseEntity.status(HttpStatus.CREATED).body(personalOffice);
     }
 
     @GetMapping
